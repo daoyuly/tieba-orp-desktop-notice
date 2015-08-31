@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+    "name": "桌面提醒-上线步骤提醒",
+    "version": "1.0",
+    "description": "桌面提醒-上线步骤提醒",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["http://orp.baidu.com/*"],
+            "js": ["js/content.js"]
+        }
+    ],
+
+    "background":{
+      "scripts":["js/background.js"]
+
+        },
+
+    "permissions":[
+        "notifications",
+        "system.cpu",
+        "tabs"
+    ],
+
+
+
+    "web_accessible_resources":[
+       "images/icon48.png",
+       "js/jquery.js"
+    ]
+
+}
